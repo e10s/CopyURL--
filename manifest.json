@@ -9,7 +9,7 @@
 		]
 	},
 	"permissions": [
-		"contextMenus",
+		"menus",
 		"clipboardWrite"
 	],
 	"content_scripts": [

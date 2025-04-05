@@ -26,14 +26,14 @@ const specs = [
 ];
 
 specs.forEach((spec, index) => {
-	browser.contextMenus.create(
+	browser.menus.create(
 		{
 			id: `${index}`, title: spec.title, contexts: ["all"],
 			documentUrlPatterns: ["https://*/*"]
 		})
 });
 
-browser.contextMenus.onClicked.addListener((info, tab) => {
+browser.menus.onClicked.addListener((info, tab) => {
 	// Delegate handling clipboard to the content script.
 	browser.tabs.sendMessage(tab.id, { "format": specs[`${info.menuItemId}`].format });
 });
