@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "Copy URL--",
 	"description": "Copy URL.",
 	"version": "0.1.1",
@@ -7,6 +7,11 @@
 		"scripts": [
 			"background.js"
 		]
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{ff8ec2fc-3c12-47dc-8de5-e073003a0d78}"
+		}
 	},
 	"permissions": [
 		"menus",
