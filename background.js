@@ -25,12 +25,14 @@ const specs = [
 	}
 ];
 
-specs.forEach((spec, index) => {
-	browser.menus.create(
-		{
-			id: `${index}`, title: spec.title, contexts: ["all"],
-			documentUrlPatterns: ["https://*/*"]
-		})
+browser.runtime.onInstalled.addListener(() => {
+	specs.forEach((spec, index) => {
+		browser.menus.create(
+			{
+				id: `${index}`, title: spec.title, contexts: ["all"],
+				documentUrlPatterns: ["https://*/*"]
+			})
+	});
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
