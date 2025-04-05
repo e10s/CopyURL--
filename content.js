@@ -1,3 +1,5 @@
+"use strict";
+
 browser.runtime.onMessage.addListener(msg => {
 	if (!msg.format) {
 		return;
