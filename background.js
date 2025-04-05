@@ -29,7 +29,7 @@ specs.forEach((spec, index) => {
 	browser.contextMenus.create(
 		{
 			id: `${index}`, title: spec.title, contexts: ["all"],
-			documentUrlPatterns: ["http://*/*", "https://*/*"]
+			documentUrlPatterns: ["https://*/*"]
 		})
 });
 
